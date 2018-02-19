@@ -12,7 +12,7 @@ namespace PasswordProject.Tests
 
 
     [TestMethod]
-    public void Reset_Pass()
+    public void ResetMethod_Pass()
     {
       //Arrange
       int expectedResult = 0;

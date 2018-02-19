@@ -9,10 +9,6 @@ namespace PasswordProject.Models
   {
     public static int _score = 0;
 
-    Regex rgx = new Regex("[^A-Za-z0-9]");
-
-
-
     public static int Reset()
     {
       Console.WriteLine("The score has been reset to 0");
