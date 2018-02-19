@@ -25,7 +25,7 @@ namespace PasswordProject.Models
       if(password != "password" || password != "p4ssword")
       {
         _score++;
-        Console.WriteLine("Your score increased by 1 in condition 1");
+        Console.WriteLine("The score increased by 1 in condition 1");
       }
       //condition 2
       if(Regex.IsMatch(password, @"\d")) //password contains numbers
@@ -33,16 +33,25 @@ namespace PasswordProject.Models
         _score++;
         Console.WriteLine("The score increased by 1 in condition 2");
       }
-      if(password.Length >= 8)
+      //condition 3
+      if(Regex.Match(password, @"^[A-Z]").Success) //password contains capital letters
+      {
+        _score++;
+        Console.WriteLine("The score increased by 1 in condition 3");
+      }
+      //condition 4
+      if(password.Length >= 12)
       {
         _score += 2;
-        Console.WriteLine("The score increased by 2");
+        Console.WriteLine("The score increased by 2 in condition 4");
       }
-      // else if(password.Length >= 6)
-      // {
-      //   _score++;
-      //   Console.WriteLine("Your score increased by 1");
-      // }
+      //condition 5
+      else if(password.Length >= 10)
+      {
+        _score ++;
+        Console.WriteLine("The score increased by 1 in condition 5");
+      }
+
       return _score;
     }
   }
