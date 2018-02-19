@@ -27,9 +27,9 @@ namespace PasswordProject.Tests
     {
       //Arrange
       Password testPassword = new Password();
-      int expectedResult = 1;
+      int expectedResult = 4;
       //Act
-      int actualResult = testPassword.PasswordChecker("80bIsGr8");
+      int actualResult = testPassword.PasswordChecker("P4ssw0rd");
       //Assert
       Assert.AreEqual(expectedResult, actualResult);
     }

@@ -28,16 +28,16 @@ namespace PasswordProject.Models
         Console.WriteLine("Your score increased by 1 in condition 1");
       }
       //condition 2
-      if(Regex.Match(password, @"/.[!,@,#,$,%,^,&,*,?,_,~,-,£,(,)]/", RegexOptions.ECMAScript).Success)
+      if(Regex.IsMatch(password, @"\d")) //password contains numbers
       {
         _score++;
         Console.WriteLine("The score increased by 1 in condition 2");
       }
-      // if(password.Length >= 8)
-      // {
-      //   _score += 2;
-      //   Console.WriteLine("Your score increased by 2");
-      // }
+      if(password.Length >= 8)
+      {
+        _score += 2;
+        Console.WriteLine("The score increased by 2");
+      }
       // else if(password.Length >= 6)
       // {
       //   _score++;
