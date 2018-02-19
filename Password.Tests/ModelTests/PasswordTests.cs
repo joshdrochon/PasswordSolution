@@ -29,7 +29,7 @@ namespace PasswordProject.Tests
       Password testPassword = new Password();
       int expectedResult = 1;
       //Act
-      int actualResult = testPassword.PasswordChecker("SomeWord");
+      int actualResult = testPassword.PasswordChecker("80bIsGr8");
       //Assert
       Assert.AreEqual(expectedResult, actualResult);
     }
